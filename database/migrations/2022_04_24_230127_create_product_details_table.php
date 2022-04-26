@@ -15,7 +15,7 @@ class CreateProductDetailsTable extends Migration
     {
         Schema::create('product_details', function (Blueprint $table) {
             $table->id();
-            $table->integer('stock');
+            $table->integer('stock')->default(0);
             $table->string('summary');
             $table->text('description')->nullable();
             $table->timestamps();
